@@ -10,14 +10,14 @@
 </script>
 
 <main
-  class="bg-stone-900 h-screen text-neutral-100 overflow-auto flex justify-center"
+  class="bg-black h-screen text-neutral-100 overflow-auto flex justify-center"
 >
   {#if $prjOpen}
     <svelte:component this={$currPrjInfo.component} />
   {/if}
 
   {#if !$prjOpen}
-    <div class="grid grid-cols-3 gap-6 p-16">
+    <div class="grid md:grid-cols-3 sm:grid-cols-1 gap-6 p-8">
       {#each prjs as vizu}
         <VizuCard {vizu} />
       {/each}

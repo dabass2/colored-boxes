@@ -1,6 +1,7 @@
 <script lang="ts">
   import { currPrjInfo, prjOpen } from "../store";
   import type { Project } from "../types";
+  import Button from "./Button.svelte";
 
   const handleClose = () => {
     $prjOpen = false;
@@ -11,10 +12,7 @@
 <div class="border-slate-500 border-2">
   <div id="infoHeader" class="flex items-baseline justify-between m-4">
     <span class="font-bold text-lg">Sketch Name</span>
-    <button
-      class="py-1 px-2 bg-slate-300 hover:bg-slate-600 text-black hover:border-slate-300 hover:text-white rounded-full border-slate-600 border-2"
-      on:click={handleClose}>Close</button
-    >
+    <Button on:click={handleClose}>Close</Button>
   </div>
   <hr />
   <div class="px-4 py-4 break-normal">
